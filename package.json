@@ -1,6 +1,6 @@
 {
-  "name": "gitbook-plugin-lunr",
-  "description": "Index book in a lunr index accessible from the search plugin",
+  "name": "honkit-plugin-lunr-deep",
+  "description": "Index book in a lunr index accessible from the search plugin, including first and second heading levels",
   "main": "index.js",
   "version": "1.2.0",
   "engines": {
@@ -8,30 +8,32 @@
   },
   "dependencies": {
     "gitbook-plugin-search": "*",
-    "html-entities": "1.2.0",
-    "lunr": "0.5.12"
+    "lunr": "0.5.12",
+    "cheerio": "1.0.0-rc.10",
+    "striptags": "3.2.0",
+    "github-slugid": "1.0.1"
   },
-  "homepage": "https://github.com/GitbookIO/plugin-lunr",
+  "homepage": "https://github.com/OlduwanSteve/plugin-lunr",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitbookIO/plugin-lunr.git"
+    "url": "https://github.com/OlduwanSteve/plugin-lunr.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GitbookIO/plugin-lunr/issues"
+    "url": "https://github.com/OlduwanSteve/plugin-lunr/issues"
   },
   "gitbook": {
     "properties": {
-        "maxIndexSize": {
-            "type": "number",
-            "title": "Limit size for the index",
-            "default": 1000000
-        },
-        "ignoreSpecialCharacters": {
-            "type": "boolean",
-            "title": "Ignore special characters in words",
-            "default": false
-        }
+      "maxIndexSize": {
+        "type": "number",
+        "title": "Limit size for the index",
+        "default": 1000000
+      },
+      "ignoreSpecialCharacters": {
+        "type": "boolean",
+        "title": "Ignore special characters in words",
+        "default": false
+      }
     }
   },
   "scripts": {
